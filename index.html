@@ -24,14 +24,16 @@ button{font-family:inherit;}
 svg.ico{stroke:var(--ink); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round;}
 
 .nav{border-bottom:1px solid var(--rule);}
-.nav-in{max-width:1100px; margin:0 auto; padding:20px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px;}
+.nav-in{max-width:1100px; margin:0 auto; padding:20px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}
 .word{font-family:'Newsreader',serif; font-size:20px; font-weight:600; white-space:nowrap;}
 .word .tag{font-family:'Inter',sans-serif; font-size:10.5px; letter-spacing:.1em; color:var(--indigo); font-weight:600; margin-left:9px;}
-.navlinks{display:flex; align-items:center; gap:24px; font-size:13.5px; color:var(--ink-dim); flex-wrap:wrap;}
+.navlinks{display:flex; align-items:center; gap:20px; font-size:13.5px; color:var(--ink-dim); flex-wrap:wrap;}
 .navlinks a{cursor:pointer;}
 .navlinks a:hover, .navlinks a.on{color:var(--ink); font-weight:600;}
-.navcta{background:var(--navy); color:#fff; font-size:13.5px; font-weight:600; padding:10px 19px; border-radius:7px; border:none; cursor:pointer; white-space:nowrap;}
-.navcta:hover{background:var(--indigo);}
+#navAuth{display:flex; align-items:center; gap:16px; font-size:13.5px; color:var(--ink-dim);}
+#navAuth a{cursor:pointer;}
+#navAuth a:hover{color:var(--ink);}
+.premium-pill{background:var(--navy); color:#fff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px;}
 
 .hero-sec{padding:76px 0 84px;}
 .hero-grid{display:grid; grid-template-columns:1.05fr 0.8fr; gap:56px; align-items:center;}
@@ -62,7 +64,6 @@ section{padding:70px 0;}
 .benefit h3{font-family:'Newsreader',serif; font-size:18px; font-weight:600; margin-bottom:9px;}
 .benefit p{font-size:13.5px; color:var(--ink-dim); line-height:1.6; max-width:280px;}
 
-/* teaser + hold rows */
 .hold-row{display:grid; grid-template-columns:36px 1fr 140px; gap:14px; align-items:center; padding:16px 0; border-bottom:1px solid var(--rule);}
 .hold-num{font-size:12.5px; color:var(--ink-faint);}
 .hold-tick{font-family:'Newsreader',serif; font-weight:600; font-size:17px;}
@@ -74,15 +75,13 @@ section{padding:70px 0;}
 .teaser-box{border:1px solid var(--rule); border-radius:10px; overflow:hidden;}
 .teaser-body{padding:0 24px;}
 .teaser-foot{display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; padding:16px 24px; background:var(--paper); border-top:1px solid var(--rule); font-size:13px; color:var(--ink-faint);}
-.lockbadge{display:flex; align-items:center; gap:7px; color:var(--ink-dim); font-weight:600;}
 .linkgo{color:var(--indigo); font-weight:600; cursor:pointer;}
 .teaser-two{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px;}
 .mini-card{border:1px solid var(--rule); border-radius:10px; padding:20px; display:flex; justify-content:space-between; align-items:center; gap:12px;}
 .mini-card .mt{font-size:13.5px; color:var(--ink-dim);}
 .mini-card .mv{font-family:'Newsreader',serif; font-size:24px; font-weight:600;}
 
-/* gate page */
-.gatewrap{border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-top:34px;}
+.gatewrap{border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-top:14px;}
 .skel{background:var(--paper); padding:24px;}
 .skel-row{height:12px; background:var(--rule); border-radius:4px; margin-bottom:12px; width:70%;}
 .skel-row:nth-child(2){width:90%;} .skel-row:nth-child(3){width:55%;} .skel-row:nth-child(4){width:80%;}
@@ -91,7 +90,6 @@ section{padding:70px 0;}
 .gate h3{font-family:'Newsreader',serif; font-size:20px; font-weight:600; margin-bottom:10px;}
 .gate p{font-size:13.5px; color:var(--ink-dim); max-width:420px; margin:0 auto 22px; line-height:1.6;}
 
-/* essays */
 .es-row{display:grid; grid-template-columns:80px 1fr 100px; gap:18px; align-items:start; padding:19px 0; border-bottom:1px solid var(--rule);}
 .es-no{font-size:12.5px; color:var(--ink-faint); padding-top:3px;}
 .es-title{font-family:'Newsreader',serif; font-size:17.5px; font-weight:500; margin-bottom:5px;}
@@ -99,7 +97,6 @@ section{padding:70px 0;}
 .es-date{font-size:12px; color:var(--ink-faint); text-align:right; padding-top:3px;}
 .empty{font-size:13.5px; color:var(--ink-faint); padding:20px 0;}
 
-/* pricing */
 .infobar{border:1px solid var(--rule); border-radius:9px; padding:16px 22px; display:flex; gap:26px; flex-wrap:wrap; margin-bottom:40px; font-size:13.5px; color:var(--ink-dim);}
 .infobar b{color:var(--ink);}
 .plans{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
@@ -122,7 +119,6 @@ section{padding:70px 0;}
 .inc-item:before{content:"✓"; color:var(--indigo); font-weight:700;}
 .legalnote{font-size:12px; color:var(--ink-faint); border-top:1px solid var(--rule); padding-top:16px; line-height:1.6;}
 
-/* contact */
 .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
 .contact-card{border:1px solid var(--rule); border-radius:10px; padding:26px;}
 .contact-card .ci{width:38px; height:38px; border-radius:50%; background:var(--paper); display:flex; align-items:center; justify-content:center; margin-bottom:14px;}
@@ -130,30 +126,33 @@ section{padding:70px 0;}
 .contact-card p{font-size:13px; color:var(--ink-dim); line-height:1.55; margin-bottom:12px;}
 .contact-card a{color:var(--indigo); font-weight:600; font-size:13.5px;}
 
-/* admin */
 .aform{border:1px solid var(--rule); border-radius:10px; padding:24px; margin-bottom:26px;}
 .aform h3{font-family:'Newsreader',serif; font-size:17px; margin-bottom:14px;}
 .aform .row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
-.aform input, .aform textarea{flex:1; min-width:120px; padding:9px 11px; border:1px solid var(--rule); border-radius:6px; font-size:13.5px; font-family:inherit; color:var(--ink);}
+.aform input, .aform textarea, .aform select{flex:1; min-width:120px; padding:9px 11px; border:1px solid var(--rule); border-radius:6px; font-size:13.5px; font-family:inherit; color:var(--ink);}
 .aform textarea{width:100%; min-height:56px; resize:vertical;}
 .aform button{background:var(--navy); color:#fff; border:none; padding:9px 18px; border-radius:6px; font-size:13.5px; font-weight:600; cursor:pointer;}
 .alist{margin-top:14px;}
 .arow{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:9px 0; border-top:1px solid var(--rule); font-size:13px;}
 .arow .del{color:#A5433C; cursor:pointer; font-size:12px; font-weight:600; background:none; border:none;}
-.savenote{font-size:12px; color:var(--ink-faint); margin-top:4px;}
+
+.authbox{max-width:400px;}
+.authtabs{display:flex; gap:4px; margin-bottom:22px; border:1px solid var(--rule); border-radius:8px; padding:4px;}
+.authtab{flex:1; text-align:center; padding:9px; border-radius:6px; font-size:13.5px; font-weight:600; cursor:pointer; color:var(--ink-dim);}
+.authtab.on{background:var(--paper); color:var(--ink);}
+.authform input{width:100%; padding:11px 13px; border:1px solid var(--rule); border-radius:7px; font-size:14px; margin-bottom:12px; font-family:inherit;}
+#authMsg{font-size:13px; min-height:18px; margin-top:8px;}
 
 .ctaband{background:var(--navy); color:#fff; text-align:center; padding:78px 0;}
 .ctaband h2{font-family:'Newsreader',serif; font-size:29px; font-weight:500; margin-bottom:16px;}
 .ctaband p{font-size:15px; color:#C6CBE6; max-width:540px; margin:0 auto 30px; line-height:1.65;}
 .btn-white{background:#fff; color:var(--navy); font-size:14.5px; font-weight:700; padding:13px 24px; border-radius:7px; border:none; cursor:pointer;}
-.btn-white:hover{background:#EDEFFA;}
 
 footer{padding:48px 0 36px;}
 .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; margin-bottom:30px;}
 .foot-grid p{font-size:13px; color:var(--ink-dim); line-height:1.65; max-width:300px;}
 .foot-h{font-size:11.5px; letter-spacing:.07em; color:var(--ink-faint); font-weight:700; margin-bottom:14px;}
 .foot-grid a{display:block; font-size:13.5px; color:var(--ink-dim); margin-bottom:10px;}
-.foot-grid a:hover{color:var(--ink);}
 .footbottom{border-top:1px solid var(--rule); padding-top:22px; font-size:12px; color:var(--ink-faint); line-height:1.7;}
 
 .toast{position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(16px); opacity:0; background:var(--ink); color:#fff; padding:12px 22px; border-radius:7px; font-size:13.5px; transition:.25s; z-index:60; pointer-events:none; max-width:90vw; text-align:center;}
@@ -175,12 +174,14 @@ footer{padding:48px 0 36px;}
     <div class="navlinks">
       <a href="#home" data-p="home">Anasayfa</a>
       <a href="#yazilar" data-p="yazilar">Yazılar</a>
-      <a href="#portfoy" data-p="portfoy">Portföy Arşivi</a>
+      <a href="#analizler" data-p="analizler">Şirket Analizleri</a>
+      <a href="#portfoy" data-p="portfoy">Portföy</a>
       <a href="#izleme" data-p="izleme">İzleme Listesi</a>
       <a href="#uyelik" data-p="uyelik">Üyelik</a>
       <a href="#iletisim" data-p="iletisim">İletişim</a>
+      <a href="#admin" data-p="admin" id="navAdmin" style="display:none;">Yönetim</a>
     </div>
-    <button class="navcta" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Patreon ile Giriş</button>
+    <div id="navAuth"></div>
   </div>
 </nav>
 
@@ -191,7 +192,7 @@ footer{padding:48px 0 36px;}
       <div>
         <div class="kicker">ÖZEL YATIRIM GÜNLÜĞÜ</div>
         <h1>Her pozisyonun bir gerekçesi var; hepsini yazılı tutuyorum.</h1>
-        <p>NASDAQ ağırlıklı, büyüme temalı portföyümü ve izleme listemi, kararların arkasındaki notlarla birlikte üyelerle paylaşıyorum. Kopyalanacak bir sinyal değil, bir düşünme biçimi sunuyorum. Yatırım tavsiyesi değildir.</p>
+        <p>NASDAQ ağırlıklı, büyüme temalı portföyümü ve izleme listemi, kararların arkasındaki notlarla birlikte üyelerle paylaşıyorum. Yatırım tavsiyesi değildir.</p>
         <div class="hero-actions">
           <a class="btn-primary" href="#uyelik" style="text-decoration:none; display:inline-block;">Üyeliği İncele</a>
           <a class="btn-outline" href="#portfoy" style="text-decoration:none; display:inline-block;">Portföye Göz At</a>
@@ -214,24 +215,21 @@ footer{padding:48px 0 36px;}
 
   <section class="rule-top">
     <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">ÜYELİKLE NELER SUNULUYOR</div><h2>İçeride sizi üç şey bekliyor.</h2><p>Üyelik, düzenli güncellenen üç bölüme erişim sağlar. Amaç kopyalanacak bir sinyal değil, karar sürecini görünür kılmaktır.</p></div>
+      <div class="sec-head"><div class="sec-kicker">ÜYELİKLE NELER SUNULUYOR</div><h2>İçeride sizi üç şey bekliyor.</h2><p>Üyelik, düzenli güncellenen üç bölüme erişim sağlar.</p></div>
       <div class="benefit-grid">
-        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><path d="M8 5 L8 29 M8 5 Q17 3 26 5 L26 29 Q17 27 8 29"/><path d="M13 11 L21 11 M13 16 L21 16 M13 21 L19 21"/></svg><h3>Portföy Defteri</h3><p>Elimdeki pozisyonlar, ağırlıkları ve giriş maliyetlerim; düzenli güncellenen kısa gerekçe notlarıyla.</p></div>
-        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><circle cx="14" cy="14" r="9"/><path d="M20.5 20.5 L28 28"/><path d="M14 10 L14 18 M10 14 L18 14"/></svg><h3>İzleme Listesi</h3><p>Henüz almadığım ama radarımda tuttuğum şirketler ve onları neden takip ettiğime dair notlar.</p></div>
-        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><path d="M6 28 L11 27 L26 12 Q28 10 26 8 Q24 6 22 8 L7 23 L6 28 Z"/><path d="M20 10 L24 14"/></svg><h3>Analiz Notları</h3><p>Alım satım kararlarımın arkasındaki düşünce süreci; sayıların ötesinde neden-sonuç ilişkisi.</p></div>
+        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><path d="M8 5 L8 29 M8 5 Q17 3 26 5 L26 29 Q17 27 8 29"/><path d="M13 11 L21 11 M13 16 L21 16 M13 21 L19 21"/></svg><h3>Portföy Defteri</h3><p>Pozisyonlar, ağırlıklar ve giriş maliyetlerim; düzenli güncellenen gerekçe notlarıyla.</p></div>
+        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><circle cx="14" cy="14" r="9"/><path d="M20.5 20.5 L28 28"/><path d="M14 10 L14 18 M10 14 L18 14"/></svg><h3>İzleme Listesi</h3><p>Henüz almadığım ama radarımda tuttuğum şirketler ve notlar.</p></div>
+        <div class="benefit"><svg class="ico bi" width="34" height="34" viewBox="0 0 34 34"><path d="M6 28 L11 27 L26 12 Q28 10 26 8 Q24 6 22 8 L7 23 L6 28 Z"/><path d="M20 10 L24 14"/></svg><h3>Şirket Analizleri</h3><p>Yatırım tezi, bull/bear senaryoları, katalizör ve riskler.</p></div>
       </div>
     </div>
   </section>
 
   <section class="rule-top" style="background:var(--paper);">
     <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">PORTFÖYDEN İLK POZİSYONLAR</div><h2>Beş pozisyon, tek bir büyüme teması.</h2><p>Ağırlıklar güncel dağılımımın bir kısmı. Kopyalanacak model portföy değil; kişisel kayıt. Yatırım tavsiyesi değildir.</p></div>
+      <div class="sec-head"><div class="sec-kicker">PORTFÖYDEN İLK POZİSYONLAR</div><h2>Öne çıkan pozisyonlar.</h2><p>Ağırlıklar güncel dağılımımın bir kısmı. Yatırım tavsiyesi değildir.</p></div>
       <div class="teaser-box">
-        <div class="teaser-body" id="homeHoldings"></div>
-        <div class="teaser-foot">
-          <span id="lockedPosNote"></span>
-          <span class="linkgo" onclick="go('portfoy')">Tümünü görüntüle →</span>
-        </div>
+        <div class="teaser-body" id="homeHoldings"><div class="empty">Yükleniyor…</div></div>
+        <div class="teaser-foot"><span id="lockedPosNote"></span><span class="linkgo" onclick="go('portfoy')">Tümünü görüntüle →</span></div>
       </div>
       <div class="teaser-two">
         <div class="mini-card"><div><div class="mt">İzleme listesinde</div><div class="mv" id="wlCountHome">—</div></div><span class="linkgo" onclick="go('izleme')">Listeyi gör →</span></div>
@@ -242,242 +240,122 @@ footer{padding:48px 0 36px;}
 </div>
 
 <!-- YAZILAR -->
-<div class="page" data-page="yazilar">
-  <section>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">HERKESE AÇIK</div><h1>Yazılar</h1><p>Finansal okuryazarlık ve piyasa gözlemleri üzerine düzenli notlar.</p></div>
-      <div id="articleList"></div>
-    </div>
-  </section>
-</div>
+<div class="page" data-page="yazilar"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">HERKESE AÇIK VE ÜYELERE ÖZEL</div><h1>Yazılar</h1><p>Finansal okuryazarlık ve piyasa gözlemleri üzerine düzenli notlar.</p></div>
+  <div id="articleList"></div>
+</div></section></div>
 
-<!-- PORTFÖY ARŞİVİ (gated) -->
-<div class="page" data-page="portfoy">
-  <section>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">ÜYELERE ÖZEL</div><h1>Portföy Arşivi</h1><p>Portföyümdeki tüm pozisyonların kaydı: ağırlıklar, ortalama maliyet, işlem tarihi ve gerekçe notu. Kopyalanacak model portföy değil; kişisel karar defteri. Yatırım tavsiyesi değildir.</p></div>
-      <div class="gatewrap">
-        <div class="skel"><div class="skel-row"></div><div class="skel-row"></div><div class="skel-row"></div><div class="skel-row"></div></div>
-        <div class="gate">
-          <div class="gi"><svg class="ico" width="18" height="18" viewBox="0 0 20 20"><path d="M5 9V6.5C5 4 6.8 2 10 2s5 2 5 4.5V9"/><rect x="3.5" y="9" width="13" height="9" rx="2"/></svg></div>
-          <h3>Portföy arşivi üyelere özeldir</h3>
-          <p>Pozisyonların tamamını, maliyetlerimi ve gerekçe notlarımı görmek için üye olun.</p>
-          <button class="btn-primary" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Patreon ile Giriş</button>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+<!-- YAZI DETAY -->
+<div class="page" data-page="yazi"><section><div class="wrap"><div id="articleDetail"></div></div></section></div>
 
-<!-- İZLEME ARŞİVİ (gated) -->
-<div class="page" data-page="izleme">
-  <section>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">ÜYELERE ÖZEL</div><h1>İzleme Listesi Arşivi</h1><p>Henüz portföyde olmayan, yakından takip ettiğim şirketler. Neden izlediğimi not ediyorum; hedef fiyat veya pozisyon açma çağrısı değil. Yatırım tavsiyesi değildir.</p></div>
-      <div class="gatewrap">
-        <div class="skel"><div class="skel-row"></div><div class="skel-row"></div><div class="skel-row"></div><div class="skel-row"></div></div>
-        <div class="gate">
-          <div class="gi"><svg class="ico" width="18" height="18" viewBox="0 0 20 20"><path d="M5 9V6.5C5 4 6.8 2 10 2s5 2 5 4.5V9"/><rect x="3.5" y="9" width="13" height="9" rx="2"/></svg></div>
-          <h3>İzleme listesi üyelere özeldir</h3>
-          <p id="wlGateText">Listedeki tüm şirketleri ve notlarımı görmek için üye olun.</p>
-          <button class="btn-primary" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Patreon ile Giriş</button>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+<!-- ŞİRKET ANALİZLERİ -->
+<div class="page" data-page="analizler"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">ŞİRKET ANALİZLERİ</div><h1>Takip ettiğim şirketler üzerine notlar.</h1><p>Özetler herkese açık; detaylı tez, bull/bear senaryoları ve riskler üyelere özeldir.</p></div>
+  <div id="analysesList"></div>
+</div></section></div>
+
+<div class="page" data-page="analiz"><section><div class="wrap"><div id="analysisDetail"></div></div></section></div>
+
+<!-- PORTFÖY -->
+<div class="page" data-page="portfoy"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">ÜYELERE ÖZEL</div><h1>Portföy Arşivi</h1><p>Tüm pozisyonların kaydı: ağırlık, ortalama maliyet, giriş tarihi ve gerekçe notu. Yatırım tavsiyesi değildir.</p></div>
+  <div id="portfoyFull"></div>
+</div></section></div>
+
+<!-- İZLEME -->
+<div class="page" data-page="izleme"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">ÜYELERE ÖZEL</div><h1>İzleme Listesi Arşivi</h1><p>Henüz portföyde olmayan, yakından takip ettiğim şirketler. Yatırım tavsiyesi değildir.</p></div>
+  <div id="izlemeFull"></div>
+</div></section></div>
 
 <!-- ÜYELİK -->
-<div class="page" data-page="uyelik">
-  <section>
-    <div class="wrap">
-      <div class="sec-head" style="text-align:center; margin:0 auto 34px;"><div class="sec-kicker" style="justify-content:center;">ÜYELİK</div><h1 style="margin:0 auto 14px;">Size uygun planı seçin</h1><p style="margin:0 auto;">Her iki plan da portföy defterinin ve izleme listesinin tamamına erişim sağlar. Destekçi Üyelik, erken katılan üyelere özel indirimli fiyatla sunulur.</p></div>
-      <div class="infobar"><span>👥 <b>Destekçi Üyelik:</b> 20 kişilik kontenjan</span><span>∞ <b>Tam Üyelik:</b> kontenjan sınırı yok</span></div>
-      <div class="plans">
-        <div class="plan"><div class="plan-top"><h3>Destekçi Üyelik</h3><span class="badge">20 kişilik kontenjan</span></div><div class="price">$9.99</div><div class="per">/ay</div><ul><li>Portföy defterinin kaydı ve notları</li><li>İzleme listesindeki şirketlerin notları</li><li>Tüm analiz notlarım</li><li>Erken üyelere özel fiyat</li></ul><button class="btn-outline" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Kontenjanı Yakala</button></div>
-        <div class="plan hi"><div class="plan-top"><h3>Tam Üyelik</h3><span class="badge hi">Sınırsız kontenjan</span></div><div class="price">$12.99</div><div class="per">/ay</div><ul><li>Portföy defterinin kaydı ve notları</li><li>İzleme listesindeki şirketlerin notları</li><li>Tüm analiz notlarım</li><li>Kontenjan sınırı olmadan katılım</li></ul><button class="btn-primary" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Üyeliği Başlat</button></div>
-      </div>
-      <div class="included">
-        <h4>Tüm planlara dahil olanlar</h4>
-        <div class="inc-grid">
-          <div class="inc-item">Portföy arşivinin tamamı: pozisyonlar, ağırlıklar, maliyetler</div>
-          <div class="inc-item">İzleme listesi arşivi: neden izlediğim ve tez notlarım</div>
-          <div class="inc-item">Her pozisyon için gerekçe notları</div>
-          <div class="inc-item">Düzenli güncellemeler ve yeni eklemeler</div>
-        </div>
-        <div class="legalnote">İçerik eğitim amaçlıdır, kişisel kayıttır; yatırım tavsiyesi değildir. Üyeliğinizi istediğiniz zaman yönetebilir veya iptal edebilirsiniz. Ödemeler güvenli ödeme altyapısı üzerinden alınır.</div>
-      </div>
+<div class="page" data-page="uyelik"><section><div class="wrap">
+  <div class="sec-head" style="text-align:center; margin:0 auto 34px;"><div class="sec-kicker" style="justify-content:center;">ÜYELİK</div><h1 style="margin:0 auto 14px;">Size uygun planı seçin</h1><p style="margin:0 auto;">Her iki plan da portföy defterinin, izleme listesinin ve şirket analizlerinin tamamına erişim sağlar.</p></div>
+  <div class="infobar"><span>👥 <b>Destekçi Üyelik:</b> 20 kişilik kontenjan</span><span>∞ <b>Tam Üyelik:</b> kontenjan sınırı yok</span></div>
+  <div class="plans">
+    <div class="plan"><div class="plan-top"><h3>Destekçi Üyelik</h3><span class="badge">20 kişilik kontenjan</span></div><div class="price">$9.99</div><div class="per">/ay</div><ul><li>Portföy defteri</li><li>İzleme listesi</li><li>Şirket analizleri</li><li>Erken üyelere özel fiyat</li></ul>
+      <button class="btn-outline" onclick="currentUser ? toast('Ödeme entegrasyonu yakında eklenecek.') : go('giris')">Kontenjanı Yakala</button>
     </div>
-  </section>
-</div>
+    <div class="plan hi"><div class="plan-top"><h3>Tam Üyelik</h3><span class="badge hi">Sınırsız kontenjan</span></div><div class="price">$12.99</div><div class="per">/ay</div><ul><li>Portföy defteri</li><li>İzleme listesi</li><li>Şirket analizleri</li><li>Kontenjan sınırı yok</li></ul>
+      <button class="btn-primary" onclick="currentUser ? toast('Ödeme entegrasyonu yakında eklenecek.') : go('giris')">Üyeliği Başlat</button>
+    </div>
+  </div>
+  <div class="included"><h4>Tüm planlara dahil olanlar</h4>
+    <div class="inc-grid">
+      <div class="inc-item">Portföy arşivinin tamamı</div><div class="inc-item">İzleme listesi arşivi</div>
+      <div class="inc-item">Şirket analizlerinin tamamı</div><div class="inc-item">Düzenli güncellemeler</div>
+    </div>
+    <div class="legalnote">İçerik eğitim amaçlıdır, kişisel kayıttır; yatırım tavsiyesi değildir. Üyeliğinizi istediğiniz zaman yönetebilirsiniz. Ödeme sistemi henüz aktif değildir.</div>
+  </div>
+</div></section></div>
 
 <!-- İLETİŞİM -->
-<div class="page" data-page="iletisim">
-  <section>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">İLETİŞİM</div><h1>Soru, öneri veya iş birliği için yazın.</h1><p>Üyelik veya içerikle ilgili sorularınız için iki kanaldan ulaşabilirsiniz. Genellikle birkaç iş günü içinde dönüş yapıyorum.</p></div>
-      <div class="contact-grid">
-        <div class="contact-card"><div class="ci"><svg class="ico" width="17" height="17" viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg></div><h3>E-posta</h3><p>Üyelik ve içerikle ilgili tüm sorularınız için en hızlı kanal.</p><a href="mailto:contact@ashfieldjournal.com">contact@ashfieldjournal.com →</a></div>
-        <div class="contact-card"><div class="ci"><svg class="ico" width="17" height="17" viewBox="0 0 20 20"><path d="M3 3 L17 17 M17 3 L3 17"/></svg></div><h3>X (Twitter)</h3><p>Piyasa yorumları ve yeni yazı duyuruları için takip edin.</p><a href="#">@ashfieldjournal →</a></div>
-      </div>
-      <p class="legalnote" style="margin-top:26px;">Lütfen iletişim kanalları üzerinden kişiye özel yatırım tavsiyesi talep etmeyin; bu tür sorulara yanıt verilememektedir.</p>
+<div class="page" data-page="iletisim"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">İLETİŞİM</div><h1>Soru, öneri veya iş birliği için yazın.</h1><p>Üyelik veya içerikle ilgili sorularınız için iki kanaldan ulaşabilirsiniz.</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><div class="ci"><svg class="ico" width="17" height="17" viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M3 5.5 L10 11 L17 5.5"/></svg></div><h3>E-posta</h3><p>Üyelik ve içerikle ilgili tüm sorularınız için en hızlı kanal.</p><a href="mailto:contact@ashfieldjournal.com">contact@ashfieldjournal.com →</a></div>
+    <div class="contact-card"><div class="ci"><svg class="ico" width="17" height="17" viewBox="0 0 20 20"><path d="M3 3 L17 17 M17 3 L3 17"/></svg></div><h3>X (Twitter)</h3><p>Piyasa yorumları ve yeni yazı duyuruları için takip edin.</p><a href="#">@ashfieldjournal →</a></div>
+  </div>
+  <p class="legalnote" style="margin-top:26px;">Lütfen iletişim kanalları üzerinden kişiye özel yatırım tavsiyesi talep etmeyin.</p>
+</div></section></div>
+
+<!-- GİRİŞ / KAYIT -->
+<div class="page" data-page="giris"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">ÜYE GİRİŞİ</div><h1>Hesabına giriş yap</h1></div>
+  <div class="authbox">
+    <div class="authtabs">
+      <div class="authtab on" data-tab="login" onclick="toggleAuthForm('login')">Giriş Yap</div>
+      <div class="authtab" data-tab="register" onclick="toggleAuthForm('register')">Kayıt Ol</div>
     </div>
-  </section>
-</div>
+    <div id="loginForm" class="authform">
+      <input id="loginEmail" type="email" placeholder="E-posta">
+      <input id="loginPass" type="password" placeholder="Şifre">
+      <button class="btn-primary" style="width:100%;" onclick="doLogin()">Giriş Yap</button>
+    </div>
+    <div id="regForm" class="authform" style="display:none;">
+      <input id="regName" placeholder="Ad Soyad">
+      <input id="regEmail" type="email" placeholder="E-posta">
+      <input id="regPass" type="password" placeholder="Şifre (en az 6 karakter)">
+      <button class="btn-primary" style="width:100%;" onclick="doRegister()">Ücretsiz Hesap Oluştur</button>
+    </div>
+    <div id="authMsg"></div>
+  </div>
+</div></section></div>
+
+<!-- HESABIM -->
+<div class="page" data-page="hesabim"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">HESABIM</div><h1>Hesap bilgileri</h1></div>
+  <div id="accountBox"></div>
+</div></section></div>
 
 <!-- ADMIN -->
-<div class="page" data-page="admin">
-  <section>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">YÖNETİM</div><h1>İçerik Paneli</h1><p>Buradan yaptığın değişiklikler bu tarayıcıda saklanır. Tüm ziyaretçilerin görmesi için üretim sitesine gerçek bir veritabanı bağlamanız gerekir — bu, statik dosyanın tek başına yapamayacağı bir şey.</p></div>
+<div class="page" data-page="admin"><section><div class="wrap">
+  <div class="sec-head"><div class="sec-kicker">YÖNETİM</div><h1>İçerik Paneli</h1><p>Buradan yaptığın değişiklikler doğrudan Supabase veritabanına yazılır ve tüm ziyaretçiler tarafından görülür.</p></div>
+  <div id="adminBox"></div>
+</div></section></div>
 
-      <div class="aform">
-        <h3>Yeni Yazı Ekle</h3>
-        <div class="row"><input id="aTitle" placeholder="Başlık"><input id="aExcerpt" placeholder="Kısa özet"></div>
-        <button onclick="addArticle()">Ekle</button>
-        <div class="alist" id="adminArticleList"></div>
-      </div>
+<div class="ctaband"><div class="wrap">
+  <h2>Üye olun, kararları benimle birlikte takip edin.</h2>
+  <p>Ücretsiz hesap oluşturun; premium içerik için üyelik planlarına göz atın.</p>
+  <a class="btn-white" href="#giris" style="text-decoration:none; display:inline-block;">Hesap Oluştur</a>
+</div></div>
 
-      <div class="aform">
-        <h3>Portföyde Görünen Pozisyon Ekle</h3>
-        <div class="row"><input id="pTick" placeholder="Ticker (örn. NVDA)" style="max-width:130px;"><input id="pName" placeholder="Şirket adı"><input id="pSector" placeholder="Sektör / not"><input id="pWeight" placeholder="Ağırlık (%) " style="max-width:100px;"></div>
-        <button onclick="addPosition()">Ekle</button>
-        <div class="alist" id="adminPosList"></div>
-      </div>
-
-      <div class="aform">
-        <h3>Kilitli İçerik Sayaçları</h3>
-        <div class="row"><input id="lockedCount" placeholder="Kilitli pozisyon sayısı" style="max-width:220px;"><input id="wlCount" placeholder="İzleme listesi şirket sayısı" style="max-width:220px;"></div>
-        <button onclick="saveCounts()">Kaydet</button>
-        <div class="savenote">Bu iki sayı, Anasayfa ve arşiv sayfalarındaki "+N diğer pozisyon" ve "İzleme listesinde N şirket" notlarında kullanılır.</div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="ctaband">
-  <div class="wrap">
-    <h2>Üye olun, kararları benimle birlikte takip edin.</h2>
-    <p>Patreon hesabınızla giriş yapın, planınızı seçin; portföy defteri ve izleme listesi anında erişiminize açılsın.</p>
-    <button class="btn-white" onclick="toast('Patreon bağlantısı bu demoda etkin değil.')">Patreon ile Giriş</button>
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="word" style="font-size:16px; margin-bottom:12px;">Ashfield<span class="tag">YATIRIM GÜNLÜĞÜ</span></div><p>Kendi NASDAQ ağırlıklı büyüme portföyümün, izleme listemin ve şirket analizlerimin üyelere açık kaydı. Yatırım tavsiyesi değildir.</p></div>
+    <div><div class="foot-h">SAYFALAR</div><a href="#portfoy">Portföy Arşivi</a><a href="#izleme">İzleme Listesi</a><a href="#uyelik">Üyelik Planları</a><a href="#iletisim">İletişim</a></div>
+    <div><div class="foot-h">İLETİŞİM</div><a href="mailto:contact@ashfieldjournal.com">contact@ashfieldjournal.com</a><a href="#">@ashfieldjournal</a></div>
   </div>
-</div>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div><div class="word" style="font-size:16px; margin-bottom:12px;">Ashfield<span class="tag">YATIRIM GÜNLÜĞÜ</span></div><p>Kendi NASDAQ ağırlıklı büyüme portföyümün ve izleme listemin üyelere açık kaydı. Notlar eğitim amaçlıdır, yatırım tavsiyesi değildir.</p></div>
-      <div><div class="foot-h">SAYFALAR</div><a href="#portfoy">Portföy Arşivi</a><a href="#izleme">İzleme Listesi</a><a href="#uyelik">Üyelik Planları</a><a href="#iletisim">İletişim</a></div>
-      <div><div class="foot-h">İLETİŞİM</div><a href="mailto:contact@ashfieldjournal.com">contact@ashfieldjournal.com</a><a href="#">@ashfieldjournal</a></div>
-    </div>
-    <div class="footbottom">© 2026 Ashfield Yatırım Günlüğü. Tüm hakları saklıdır.<br>Bu sitedeki içerikler yatırım danışmanlığı kapsamında değildir; yalnızca eğitim ve bilgilendirme amaçlıdır. Yatırım kararlarınızı kendi araştırmanıza dayandırın.</div>
-  </div>
-</footer>
+  <div class="footbottom">© 2026 Ashfield Yatırım Günlüğü. Bu sitedeki içerikler yatırım danışmanlığı kapsamında değildir; yalnızca eğitim ve bilgilendirme amaçlıdır.</div>
+</div></footer>
 
 <div class="toast" id="toast">—</div>
 
-<script>
-const LS_KEY='ashfield_state_v1';
-const defaults={
-  articles:[
-    {id:'a4',no:'014',title:"Tahvil getirisi neden hisse senedi fiyatlarını belirler?",excerpt:"Iskonto oranlarının değerleme üzerindeki etkisini basit bir örnek üzerinden anlatıyorum.",date:'20 Eyl 2026'},
-    {id:'a3',no:'013',title:"Temerrüt riski ile oynaklık arasındaki fark",excerpt:"Bu iki kavram sık karıştırılıyor; ikisinin bir portföy için farklı anlamları var.",date:'12 Eyl 2026'},
-    {id:'a2',no:'012',title:"Bileşik getirinin sabırla ilişkisi",excerpt:"Uzun vadeli getiri, çoğunlukla az işlem yapmanın bir sonucudur.",date:'30 Ağu 2026'},
-    {id:'a1',no:'011',title:"Neden çoğu zaman hiçbir şey yapmamak en iyi stratejidir",excerpt:"Aktif kalma dürtüsünün getiriye maliyetini gözden geçiriyorum.",date:'18 Ağu 2026'}
-  ],
-  portfolio:[
-    {id:'p1',ticker:'AVGO',name:'Broadcom Inc.',sector:'Yarı iletken · AI altyapısı',weight:18},
-    {id:'p2',ticker:'NVDA',name:'Nvidia Corp.',sector:'Yapay zeka çipleri',weight:16},
-    {id:'p3',ticker:'TEM',name:'Tempus AI Inc.',sector:'Sağlıkta yapay zeka',weight:9},
-    {id:'p4',ticker:'ONDS',name:'Ondas Holdings',sector:'Drone / otonom sistemler',weight:8},
-    {id:'p5',ticker:'AUR',name:'Aurora Innovation',sector:'Otonom sürüş',weight:7}
-  ],
-  lockedCount:6,
-  wlCount:15
-};
-let state=JSON.parse(JSON.stringify(defaults));
-function load(){
-  try{const s=localStorage.getItem(LS_KEY); if(s) state=JSON.parse(s);}catch(e){}
-}
-function save(){
-  try{localStorage.setItem(LS_KEY, JSON.stringify(state));}catch(e){}
-}
-
-function renderHome(){
-  const el=document.getElementById('homeHoldings'); if(!el) return;
-  el.innerHTML=state.portfolio.map((p,i)=>`
-    <div class="hold-row" style="${i===state.portfolio.length-1?'border-bottom:none;':''}">
-      <div class="hold-num">0${i+1}</div>
-      <div><div class="hold-tick">${p.ticker}</div><div class="hold-sub">${p.name} — ${p.sector}</div></div>
-      <div class="hold-w"><div class="pct">%${p.weight}</div><div class="bar-wrap"><div class="bar-fill" style="width:${p.weight}%;"></div></div></div>
-    </div>`).join('');
-  document.getElementById('lockedPosNote').innerHTML=`🔒 +${state.lockedCount} diğer pozisyon — detaylar üyelere özel`;
-  document.getElementById('wlCountHome').textContent=state.wlCount+' şirket';
-  document.getElementById('wlGateText').textContent=`Listedeki tüm ${state.wlCount} şirketi ve notlarımı görmek için üye olun.`;
-}
-function renderArticles(){
-  const list=document.getElementById('articleList');
-  if(!state.articles.length){ list.innerHTML='<div class="empty">Henüz yazı eklenmedi.</div>'; return; }
-  list.innerHTML=state.articles.map(a=>`
-    <div class="es-row"><div class="es-no serif">No. ${a.no}</div><div><div class="es-title serif">${a.title}</div><div class="es-excerpt">${a.excerpt}</div></div><div class="es-date">${a.date}</div></div>`).join('');
-}
-function renderAdmin(){
-  document.getElementById('adminArticleList').innerHTML=state.articles.map(a=>`
-    <div class="arow"><span>No. ${a.no} — ${a.title}</span><button class="del" onclick="delArticle('${a.id}')">Sil</button></div>`).join('');
-  document.getElementById('adminPosList').innerHTML=state.portfolio.map(p=>`
-    <div class="arow"><span>${p.ticker} — %${p.weight} — ${p.name}</span><button class="del" onclick="delPosition('${p.id}')">Sil</button></div>`).join('');
-  document.getElementById('lockedCount').value=state.lockedCount;
-  document.getElementById('wlCount').value=state.wlCount;
-}
-function renderAll(){ renderHome(); renderArticles(); renderAdmin(); }
-
-function addArticle(){
-  const title=document.getElementById('aTitle').value.trim();
-  const excerpt=document.getElementById('aExcerpt').value.trim();
-  if(!title) return;
-  const no=String(state.articles.length ? parseInt(state.articles[0].no)+1 : 1).padStart(3,'0');
-  const today=new Date().toLocaleDateString('tr-TR',{day:'2-digit',month:'short',year:'numeric'});
-  state.articles.unshift({id:'a'+Date.now(),no,title,excerpt,date:today});
-  document.getElementById('aTitle').value=''; document.getElementById('aExcerpt').value='';
-  save(); renderAll(); toast('Yazı eklendi.');
-}
-function delArticle(id){ state.articles=state.articles.filter(a=>a.id!==id); save(); renderAll(); }
-function addPosition(){
-  const ticker=document.getElementById('pTick').value.trim().toUpperCase();
-  const name=document.getElementById('pName').value.trim();
-  const sector=document.getElementById('pSector').value.trim();
-  const weight=parseFloat(document.getElementById('pWeight').value);
-  if(!ticker || isNaN(weight)) return;
-  state.portfolio.push({id:'p'+Date.now(),ticker,name,sector,weight});
-  document.getElementById('pTick').value=''; document.getElementById('pName').value=''; document.getElementById('pSector').value=''; document.getElementById('pWeight').value='';
-  save(); renderAll(); toast('Pozisyon eklendi.');
-}
-function delPosition(id){ state.portfolio=state.portfolio.filter(p=>p.id!==id); save(); renderAll(); }
-function saveCounts(){
-  state.lockedCount=parseInt(document.getElementById('lockedCount').value)||0;
-  state.wlCount=parseInt(document.getElementById('wlCount').value)||0;
-  save(); renderAll(); toast('Kaydedildi.');
-}
-
-function go(p){ location.hash='#'+p; }
-function route(){
-  let p=(location.hash||'#home').replace('#','');
-  const valid=['home','yazilar','portfoy','izleme','uyelik','iletisim','admin'];
-  if(!valid.includes(p)) p='home';
-  document.querySelectorAll('.page').forEach(el=>el.classList.toggle('on', el.dataset.page===p));
-  document.querySelectorAll('.navlinks a').forEach(a=>a.classList.toggle('on', a.dataset.p===p));
-  window.scrollTo(0,0);
-}
-window.addEventListener('hashchange', route);
-
-function toast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2800);
-}
-
-load(); renderAll(); route();
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+<script src="admin.js"></script>
+<script>boot();</script>
 </body>
 </html>
